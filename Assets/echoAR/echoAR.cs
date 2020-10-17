@@ -21,7 +21,7 @@ public class echoAR : MonoBehaviour
 {
 
     // Your echoAR API key
-    public string APIKey = "<YOUR_API_KEY>";
+    public string APIKey = "odd-sound-2609";
     private string serverURL;
 
     // echoAR Database
