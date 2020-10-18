@@ -67,7 +67,22 @@ public class agorainterface : MonoBehaviour
 
     } 
     private void OnUserJoined (uint uid, int elapsed) {
-        Debug.Log("new person join channel " + " " + uid);
+
+        Debug.Log("New user has joined channel with id: " + uid);
+        GameObject go = GameObject.CreatePrimitive(PrimitiveType.Plane);
+        go.name = uid.ToString();
+        VideoSurface o = go.AddComponent<VideoSurface>();
+        o.SetForUser(uid);
+
+        //o.mAdjustTransfrom += OnTransformDelegate;
+        o.SetEnable(true);
+        o.transform.Rotate(-90.0f, 0.0f, 0.0f);
+        float r = Random.Range(-5.0f, 5.0f);
+        o.transform.position = new Vector3(0f, r, 0f);
+        o.transform.localScale = new Vector3(0.5f, 0.5f, 1.0f);
+
+        mRemotePeer = uid;
+        /*Debug.Log("new person join channel " + " " + uid);
         GameObject go;
         go = GameObject.CreatePrimitive(PrimitiveType.Plane);
         go.name = uid.ToString();
@@ -79,7 +94,7 @@ public class agorainterface : MonoBehaviour
         float r = Random.Range(-5.0f, 5.0f);
         o.transform.position = new Vector3(0f, r, 0f);
         o.transform.localScale = new Vector3(0.5f, 0.5f, 1.0f);
-        mRemotePeer = uid;
+        mRemotePeer = uid; */
 
     }
 
@@ -111,6 +126,6 @@ public class agorainterface : MonoBehaviour
         }
 
         VideoSurface o =  go.GetComponent<VideoSurface>();
-        o.mAdjustTransfrom += OnTransformDelegate;
+        //o.mAdjustTransfrom += OnTransformDelegate;
     }
 }
