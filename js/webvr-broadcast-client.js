@@ -1,5 +1,5 @@
 // Agora settings
-const agoraAppId = '44e9a1c8cf1544edb6b6e84bc8ca37d6'; // insert Agora AppID here
+const agoraAppId = '6f955edd5edf4765b5124ba88d773a2c'; // insert Agora AppID here
 const channelName = 'WebAR'; 
 var streamCount = 0;
 
@@ -384,7 +384,7 @@ function getMicDevices() {
 
 // use tokens for added security
 function generateToken() {
-  return "00644e9a1c8cf1544edb6b6e84bc8ca37d6IADDUDBklbR+V7zH5fQlq8q1gsPaUkUSvcZaEf8tfnSvHCWyvWcAAAAAEABEZ8flVOmLXwEAAQBT6Ytf"; // TODO: add a token generation
+  return "0066f955edd5edf4765b5124ba88d773a2cIADBFhvOY8dJhHWxHQB/fOeemV6o8NPmzUOqH7D4ceKatCWyvWcAAAAAEABEZ8flbz6NXwEAAQBvPo1f";
 }
 
 function rotateModel(uid, direction, send) {

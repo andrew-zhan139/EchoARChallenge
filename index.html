@@ -15,14 +15,22 @@
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
-        <a-assets>
-            <a-asset-item id="broadcaster" src="/assets/broadcaster.glb"></a-asset-item>
-        </a-assets>
-
-        <a-marker type='barcode' value='6'>
-
-        </a-marker>
-        <a-entity camera></a-entity>
+            <a-assets>
+                <a-asset-item id="broadcaster" src="/assets/broadcaster.glb"></a-asset-item>
+                <a-asset-item id="healthcard" src="/assets/healthcard.glb"></a-asset-item>
+                <a-asset-item id="lung" src="/assets/lung4.glb"></a-asset-item>
+                <a-asset-item id="brain" src="/assets/Brain Model.glb"></a-asset-item>
+                <a-asset-item id="covid" src="/assets/covid(1).glb"></a-asset-item>
+                <a-asset-item id="sticky" src="/assets/mystickynote1.glb"></a-asset-item>
+            </a-assets>
+            <a-entity gltf-model="#healthcard" scale="2.5 2.5 2.5" position="-2.25 0.8 -6.5" visible=true></a-entity>
+            <a-entity gltf-model="#lung" scale="3 3 3" position="1.85 -0.75 -6.5"></a-entity>
+            <a-entity gltf-model="#brain" scale="2.25 2.25 2.25" position="1.75 0.75 -6.5"></a-entity>
+            <a-entity gltf-model="#covid" scale="3 3 3" position="-2.5 -0.8 -6.5"></a-entity>
+            <a-entity gltf-model="#sticky" scale="2 2 2" position="1.5 0 -6.5"></a-entity>
+            <a-marker type='barcode' value='6'>
+            </a-marker>
+            <a-entity camera></a-entity>
         </a-scene>
     </body>
 
